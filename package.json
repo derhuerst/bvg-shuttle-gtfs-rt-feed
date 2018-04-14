@@ -22,8 +22,13 @@
 		"node": ">=6"
 	},
 	"dependencies": {
+		"gtfs-rt-bindings": "^0.1.0",
+		"pbf": "^3.1.0",
+		"through2": "^2.0.3"
 	},
 	"devDependencies": {
+		"csv-parser": "^1.12.1",
+		"pump": "^3.0.0",
 		"tap-min": "^1.2.2",
 		"tape": "^4.8.0"
 	},
