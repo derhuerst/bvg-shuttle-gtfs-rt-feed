@@ -19,7 +19,26 @@ npm install bvg-shuttle-gtfs-rt-feed
 ## Usage
 
 ```js
-todo
+const fs = require('fs')
+const csvParser = require('csv-parser')
+const toGtfsRt = require('bvg-shuttle-gtfs-rt-feed')
+
+const convert = toGtfsRt()
+
+fs.createReadStream('vehicle_states.csv')
+.pipe(csvParser())
+.pipe(convert)
+.pipe(…)
+```
+
+`convert` ist a [transform stream](https://nodejs.org/api/stream.html#stream_class_stream_transform) that emits [Protobuffer](https://developers.google.com/protocol-buffers/) [GTFS-Realtime `VehiclePosition` updates](https://developers.google.com/transit/gtfs-realtime/guides/vehicle-positions).
+
+---
+
+Download the data from https://hackathon.innoz.de/data and extract it. In the future, this library will fetch liva data from a server.
+
+```js
+cat vehicle_states.csv | node example.js >positions.pbf
 ```
 
 
