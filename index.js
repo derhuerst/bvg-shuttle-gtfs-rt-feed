@@ -11,16 +11,16 @@ const transform = (update, _, cb) => {
 			gtfs_realtime_version: '2.0',
 			timestamp: Date.now() / 1000 | 0
 		},
-		entity: { // FeedEntity
+		entity: [{ // FeedEntity
 			id: '1',
 			vehicle: { // VehiclePosition
 				// todo: trip
 				// todo: vehicle
 				position: { // Position
-					latitude: update.latitude,
-					longitude: update.longitude,
+					latitude: parseFloat(update.latitude),
+					longitude: parseFloat(update.longitude),
 					bearing: (update.theta * 180 + 90) / Math.PI,
-					speed: update.speed
+					speed: parseFloat(update.speed)
 				},
 				// todo: current_stop_sequence, stop_id
 				current_status: (update.doors === 't'
@@ -29,7 +29,7 @@ const transform = (update, _, cb) => {
 				),
 				timestamp: new Date(update.created_at) / 1000 | 0
 			}
-		}
+		}]
 	}, msg)
 
 	const buf = msg.finish()

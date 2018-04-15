@@ -12,7 +12,7 @@ const onError = (err) => {
 
 pump(
 	process.stdin,
-	csvParser(),
+	csvParser({separator: ';'}),
 	toGtfsRt(),
 	process.stdout,
 	onError
