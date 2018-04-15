@@ -1,5 +1,7 @@
 # bvg-shuttle-gtfs-rt-feed
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/derhuerst/bvg-shuttle-gtfs-rt-feed.svg)](https://greenkeeper.io/)
+
 **Transform the [live positions of the BVG autonomous shuttle](https://cloud.innoz.de/index.php/s/BE8EJsFpImUtq1q) into a [GTFS-Realtime vehicle positions feed](https://developers.google.com/transit/gtfs-realtime/guides/vehicle-positions).**
 
 [![npm version](https://img.shields.io/npm/v/bvg-shuttle-gtfs-rt-feed.svg)](https://www.npmjs.com/package/bvg-shuttle-gtfs-rt-feed)
