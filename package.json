@@ -27,7 +27,7 @@
 		"through2": "^2.0.3"
 	},
 	"devDependencies": {
-		"csv-parser": "^2.0.0",
+		"csv-parser": "^2.1.0",
 		"from2-array": "0.0.4",
 		"pump": "^3.0.0",
 		"tap-min": "^1.2.2",
