@@ -22,7 +22,7 @@
 		"node": ">=6"
 	},
 	"dependencies": {
-		"gtfs-rt-bindings": "^1.0.0",
+		"gtfs-rt-bindings": "^3.1.0",
 		"pbf": "^3.1.0",
 		"through2": "^3.0.0"
 	},
